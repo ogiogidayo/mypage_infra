@@ -90,12 +90,12 @@ resource "aws_route_table" "public-rt" {
 
 resource "aws_route_table_association" "public-rt-1a" {
   route_table_id = aws_route_table.public-rt.id
-  subnet_id = aws_subnet.public_subnet_1a.id
+  subnet_id      = aws_subnet.public_subnet_1a.id
 }
 
 resource "aws_route_table_association" "public-rt-1c" {
   route_table_id = aws_route_table.public-rt.id
-  subnet_id = aws_subnet.public_subnet_1c.id
+  subnet_id      = aws_subnet.public_subnet_1c.id
 }
 
 resource "aws_route_table" "private-rt" {
@@ -111,10 +111,10 @@ resource "aws_route_table" "private-rt" {
 
 resource "aws_route_table_association" "private-rt-1a" {
   route_table_id = aws_route_table.private-rt.id
-  subnet_id = aws_subnet.private_subnet_1a.id
+  subnet_id      = aws_subnet.private_subnet_1a.id
 }
 
 resource "aws_route_table_association" "private-rt-1c" {
   route_table_id = aws_route_table.private-rt.id
-  subnet_id = aws_subnet.private_subnet_1c.id
+  subnet_id      = aws_subnet.private_subnet_1c.id
 }
