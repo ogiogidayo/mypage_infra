@@ -9,9 +9,9 @@ resource "aws_vpc" "vpc" {
   assign_generated_ipv6_cidr_block = false
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-vpc"
-    "project" = var.project
-    Env       = var.environment
+    Name    = "${var.project}-${var.environment}-vpc"
+    Project = var.project
+    Env     = var.environment
   }
 }
 
@@ -25,10 +25,10 @@ resource "aws_subnet" "public_subnet_1a" {
   map_public_ip_on_launch = true
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-public-subnet-1a"
-    "project" = var.project
-    Env       = var.environment
-    Type      = "public"
+    Name    = "${var.project}-${var.environment}-public-subnet-1a"
+    Project = var.project
+    Env     = var.environment
+    Type    = "public"
   }
 }
 
@@ -39,10 +39,10 @@ resource "aws_subnet" "public_subnet_1c" {
   map_public_ip_on_launch = true
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-public-subnet-1c"
-    "project" = var.project
-    Env       = var.environment
-    Type      = "public"
+    Name    = "${var.project}-${var.environment}-public-subnet-1c"
+    Project = var.project
+    Env     = var.environment
+    Type    = "public"
   }
 }
 
@@ -53,10 +53,10 @@ resource "aws_subnet" "private_subnet_1a" {
   map_public_ip_on_launch = false
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-private-subnet-1a"
-    "project" = var.project
-    Env       = var.environment
-    Type      = "private"
+    Name    = "${var.project}-${var.environment}-private-subnet-1a"
+    Project = var.project
+    Env     = var.environment
+    Type    = "private"
   }
 }
 
@@ -67,10 +67,10 @@ resource "aws_subnet" "private_subnet_1c" {
   map_public_ip_on_launch = false
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-private-subnet-1c"
-    "project" = var.project
-    Env       = var.environment
-    Type      = "private"
+    Name    = "${var.project}-${var.environment}-private-subnet-1c"
+    Project = var.project
+    Env     = var.environment
+    Type    = "private"
   }
 }
 
@@ -81,10 +81,10 @@ resource "aws_route_table" "public-rt" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-public-rt"
-    "project" = var.project
-    Env       = var.environment
-    Type      = "public"
+    Name    = "${var.project}-${var.environment}-public-rt"
+    Project = var.project
+    Env     = var.environment
+    Type    = "public"
   }
 }
 
@@ -102,10 +102,10 @@ resource "aws_route_table" "private-rt" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-private-rt"
-    "project" = var.project
-    Env       = var.environment
-    Type      = "private"
+    Name    = "${var.project}-${var.environment}-private-rt"
+    Project = var.project
+    Env     = var.environment
+    Type    = "private"
   }
 }
 
@@ -126,9 +126,9 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.vpc.id
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-igw"
-    "project" = var.project
-    Env       = var.environment
+    Name    = "${var.project}-${var.environment}-igw"
+    Project = var.project
+    Env     = var.environment
   }
 }
 

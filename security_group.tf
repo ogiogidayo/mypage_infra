@@ -8,9 +8,9 @@ resource "aws_security_group" "web_sg" {
   vpc_id      = aws_vpc.vpc.id
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-web-sg"
-    "project" = var.project
-    Env       = var.environment
+    Name    = "${var.project}-${var.environment}-web-sg"
+    Project = var.project
+    Env     = var.environment
   }
 }
 
@@ -48,9 +48,9 @@ resource "aws_security_group" "app_sg" {
   vpc_id      = aws_vpc.vpc.id
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-app-sg"
-    "project" = var.project
-    Env       = var.environment
+    Name    = "${var.project}-${var.environment}-app-sg"
+    Project = var.project
+    Env     = var.environment
   }
 }
 
@@ -97,9 +97,9 @@ resource "aws_security_group" "opmng_sg" {
   vpc_id      = aws_vpc.vpc.id
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-opmng-sg"
-    "project" = var.project
-    Env       = var.environment
+    Name    = "${var.project}-${var.environment}-opmng-sg"
+    Project = var.project
+    Env     = var.environment
   }
 }
 
@@ -146,9 +146,9 @@ resource "aws_security_group" "db_sg" {
   vpc_id      = aws_vpc.vpc.id
 
   tags = {
-    "Name"    = "${var.project}-${var.environment}-db-sg"
-    "project" = var.project
-    Env       = var.environment
+    Name    = "${var.project}-${var.environment}-db-sg"
+    Project = var.project
+    Env     = var.environment
   }
 }
 
