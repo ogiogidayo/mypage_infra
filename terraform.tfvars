@@ -1,2 +1,2 @@
-project     = "my_page"
+project     = "my-page"
 environment = "dev"
