@@ -20,7 +20,7 @@ resource "aws_instance" "app_server" {
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.public_subnet_1a.id
   associate_public_ip_address = true
-  security_groups = [
+  vpc_security_group_ids = [
     aws_security_group.app_sg.id,
     aws_security_group.opmng_sg.id,
   ]
